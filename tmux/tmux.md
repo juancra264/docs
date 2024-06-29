@@ -12,9 +12,8 @@
 | --- | --- |
 | prefix + c | Create Window |
 | prefix + n | Move to next Window |
-| prefix + p | Move to previus Window |
-| prefix + C | Create Window |
-| prefix + C | Create Window |
+| prefix + p | Move to previous Window |
+| prefix + & | Kill Window |
 
 ## Panes:
 
