@@ -17,10 +17,15 @@
 | prefix + c | Create Window |
 | prefix + n | Move to next Window |
 | prefix + p | Move to previous Window |
+| prefix + , | Rename Window |
 | prefix + & | Kill Window |
 
 ## Panes:
 
 | Command | Description |
 | --- | --- |
+| prefix + v | Split Vertically (tmux.conf modified) |
+| prefix + h | Split horizontally  (tmux.conf modified) |
+| prefix + z | maximize/minize pane |
+| prefix + x | Kill pane |
 | prefix + { | swap current pane with the previous pane |
