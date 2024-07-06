@@ -4,7 +4,11 @@
 
 | Command | Description |
 | --- | --- |
-| prefix + C | Create Window |
+| tmux new -s <session_name> | Create New Session |
+| tmux new -s <session_name> -d | Create New Session and don´t attach to it |
+| tmux a -t <session_name> | Attach to a Session |
+| tmux ls | List Sessions |
+| prefix + d | detach from current Sessions |
 
 ## Windows:
 
@@ -19,4 +23,4 @@
 
 | Command | Description |
 | --- | --- |
-| prefix + C | Create Window |
+| prefix + { | swap current pane with the previous pane |
