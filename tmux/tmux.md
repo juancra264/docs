@@ -29,3 +29,11 @@
 | prefix + z | maximize/minize pane |
 | prefix + x | Kill pane |
 | prefix + { | swap current pane with the previous pane |
+
+
+## TPM (Plugin manager):
+| Command | Description |
+| --- | --- |
+| prefix + I (capital) | Installs new plugins from GitHub or any other git repository |
+| prefix + U | updates plugins |
+| prefix + alt + u | remove plugins not onthe plugin list |
