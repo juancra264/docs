@@ -1,8 +1,8 @@
 # Ubuntu Server Template on Proxmox:
 
-Reference [Video] (https://www.youtube.com/watch?v=MJgIm03Jxdo&list=PLT98CRl2KxKHnlbYhtABg6cF50bYa8Ulo&index=20)
+Reference [Video](https://www.youtube.com/watch?v=MJgIm03Jxdo&list=PLT98CRl2KxKHnlbYhtABg6cF50bYa8Ulo&index=20)
 
-[Ubuntu Minimal Cloud Images] (https://cloud-images.ubuntu.com/minimal/releases/)  
+[Ubuntu Minimal Cloud Images](https://cloud-images.ubuntu.com/minimal/releases/)  
 
 ## Download cloud image
 
