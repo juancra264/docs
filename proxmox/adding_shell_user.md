@@ -15,6 +15,14 @@ useradd -u {user_id} -g {group_id} -d {home_path_folder} -s /bin/bash -G {group_
 passwd {user_name}
 ```
 
+## Installing sudo to proxmox server
+
+Connect with root user:
+
+```bash
+apt install sudo
+```
+
 ## Adding root/sudo privileges
 ```bash
 usermod -aG sudo {user_name}
