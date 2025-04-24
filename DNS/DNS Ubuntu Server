@@ -1,0 +1,27 @@
+Edit DNS settings:
+
+```
+sudo vim /etc/systemd/resolved.conf
+```
+
+Set:
+
+```
+DNSStubListener=no
+```
+
+
+or just run this command:
+
+```
+sudo sed -i 's/#DNSStubListener=yes/DNSStubListener=no/g' /etc/systemd/resolved.conf
+```
+
+
+
+Check the open ports:
+
+```
+sudo netstat -peanut | grep :53
+```
+
