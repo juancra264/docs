@@ -1,3 +1,5 @@
+# Thing to do after installing proxmox
+
 ### Switch Repository to Non-Production Version
 
 ```
@@ -57,3 +59,12 @@ pve1.domain.local
 ```
 
 - Upload the certificates or ACME module activation for your domain.
+
+### Setup SMART monitoring for disks
+
+```
+smartctl -a /dev/sda
+```
+### Create the first linux VM and create a Template
+
+Check how to create a template.
