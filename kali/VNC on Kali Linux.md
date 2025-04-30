@@ -31,16 +31,16 @@ WantedBy=multi-user.target
 Run:
 
 ```
-systemctl daemon-reload
+sudo systemctl daemon-reload
 ```
 ```
-systemctl enable x11vnc.service
+sudo systemctl enable x11vnc.service
 ```
 ```
-systemctl start x11vnc.service
+sudo systemctl start x11vnc.service
 ```
 ```
-systemctl status x11vnc.service
+sudo systemctl status x11vnc.service
 ```
 
 ## Configure the Firewalld
