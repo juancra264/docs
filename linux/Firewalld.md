@@ -1,6 +1,12 @@
 # Firewalld
 
-## Firewalld Configuration:
+## Firewalld Installation
+```
+sudo apt install firewalld
+```
+
+
+## Firewalld Configuration
 
 ```
 sudo firewall-cmd --list-all
