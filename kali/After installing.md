@@ -95,10 +95,13 @@ sudo systemctl enable ssh
 
 ## Configure Local firewall
 ```
-sudo apt install ufw -y
+sudo apt install firewalld -y
 ```
 ```
-sudo ufw enable
+sudo systemctl start firewalld
+```
+```
+sudo systemctl enable firewalld
 ```
 
 ## Optimize Power Management
