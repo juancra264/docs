@@ -14,16 +14,7 @@ sudo apt autoclean -y
 ```
 
 ```
-sudo apt install firmware-linux -y
-sudo apt install bmon -y
-sudo apt install htop -y
-sudo apt install iperf3 -y
-sudo apt install kitty -y
-sudo apt install speedtest-cli -y
-sudo apt install wireshark -y
-sudo apt install git -y
-sudo apt install tmux -y
-sudo apt install python3 python3-pip -y
+sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli wireshark git tmux python3 python3-pip -y
 ```
 
 ## Installing Brave
