@@ -1,9 +1,9 @@
 # Firewalld
 
-##Firewalld Configuration:
+## Firewalld Configuration:
 
 ```
- sudo firewall-cmd --list-all
+sudo firewall-cmd --list-all
 ```
 
 ## Get the active zone on the server:
@@ -36,9 +36,21 @@ sudo firewall-cmd --reload
 
 ## Allowing SSH from an IP address
 ```
-sudo firewall-cmd --add-rich-rule 'rule family="ipv4" service name="ssh" source address="10.10.1.125" accept'
+sudo firewall-cmd --add-rich-rule 'rule family="ipv4" service name="ssh" source address="10.10.1.125" accept' --permanent
 ```
 
 ```
 sudo firewall-cmd --reload
+```
+
+## Remove service
+
+```
+sudo firewall-cmd --remove-service=ssh --permanent
+```
+```
+sudo firewall-cmd --reload 
+```
+```
+sudo firewall-cmd --list-all
 ```
