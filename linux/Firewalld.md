@@ -26,6 +26,17 @@ sudo firewall-cmd --add-port=514/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
+```
 sudo firewall-cmd --add-port=3100/tcp --permanent
 sudo firewall-cmd --add-port=1514/tcp --permanent
 sudo firewall-cmd --reload
+```
+
+## Allowing SSH from an IP address
+```
+sudo firewall-cmd --add-rich-rule 'rule family="ipv4" service name="ssh" source address="10.10.1.125" accept'
+```
+
+```
+sudo firewall-cmd --reload
+```
