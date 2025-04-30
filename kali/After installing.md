@@ -77,19 +77,27 @@ echo "deb [signed-by=/usr/share/keyrings/sublimehq.gpg] https://download.sublime
 
 ```
 sudo apt update
+```
+```
 sudo apt install sublime-text -y
 ```
 
 ## Enable SSH Server
 ```
 sudo apt install openssh-server -y
+```
+```
 sudo systemctl start ssh
+```
+```
 sudo systemctl enable ssh
 ```
 
 ## Configure Local firewall
 ```
 sudo apt install ufw -y
+```
+```
 sudo ufw enable
 ```
 
