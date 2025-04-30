@@ -1,23 +1,25 @@
-Firewalld Configuration:
+# Firewalld
+
+##Firewalld Configuration:
 
 ```
  sudo firewall-cmd --list-all
 ```
 
-Get the active zone on the server:
+## Get the active zone on the server:
 
 ```
 sudo firewall-cmd --get-active-zone
 ```
 
-Adding a service to the firewalld:
+## Adding a service to the firewalld:
 
 ```
 sudo firewall-cmd --add-service=ftp --permanent
 sudo firewall-cmd --reload
 ```
 
-Adding TCP or UDP port to the firewalld:
+## Adding TCP or UDP port to the firewalld:
 
 ```
 sudo firewall-cmd --add-port=514/udp --permanent
