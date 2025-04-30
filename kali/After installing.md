@@ -4,12 +4,17 @@ Basic packages and modules:
 
 ```
 sudo apt upgrade
+```
+```
 sudo apt dist-upgrade -y
-sudo apt dist-upgrade -y
+```
+```
 sudo apt-get full-upgrade -y
-sudo apt dist-upgrade -y
+```
+```
 sudo apt autoremove -y
-sudo apt autoremove -y
+```
+```
 sudo apt autoclean -y
 ```
 
