@@ -2,25 +2,31 @@
 
 ## Installing VNC Server
 ```
-sudo apt-get install x11vnc -y
+sudo apt install x11vnc -y
 ```
+
+## Store password for the session
+```
+sudo x11vnc -storepasswd /etc/vncserver.pass
+```
+
 
 ## Configure VNC Server
 
 Add this service:
 ```
-sudo vim /lib/systemd/system/x11vnc.service
+sudo vim /lib/systemd/system/vncserver.service
 ```
 
 Copy:
 ```
 [Unit]
-Description=x11vnc service
+Description=vncserver service
 After=display-manager.service network.target syslog.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -passwd CHANGEPASSWORD
+ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -loop -noxdamage -repeat -rfbauth /etc/vncserver.pass -rfbport 5900 -shared
 ExecStop=/usr/bin/killall x11vnc
 Restart=on-failure
 
@@ -34,13 +40,13 @@ Run:
 sudo systemctl daemon-reload
 ```
 ```
-sudo systemctl enable x11vnc.service
+sudo systemctl enable vncserver.service
 ```
 ```
-sudo systemctl start x11vnc.service
+sudo systemctl start vncserver.service
 ```
 ```
-sudo systemctl status x11vnc.service
+sudo systemctl status vncserver.service
 ```
 
 ## Configure the Firewalld
