@@ -1,3 +1,5 @@
+# After installing kali
+
 ## Enable SSH Server
 ```
 sudo apt install openssh-server -y
@@ -9,9 +11,7 @@ sudo systemctl start ssh
 sudo systemctl enable ssh
 ```
 
-# After installing kali
-
-Basic packages and modules:
+## Basic packages and modules:
 
 ```
 sudo apt upgrade
@@ -28,7 +28,6 @@ sudo apt autoremove -y
 ```
 sudo apt autoclean -y
 ```
-
 ```
 sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli wireshark git tmux python3 python3-pip -y
 ```
