@@ -1,3 +1,14 @@
+## Enable SSH Server
+```
+sudo apt install openssh-server -y
+```
+```
+sudo systemctl start ssh
+```
+```
+sudo systemctl enable ssh
+```
+
 # After installing kali
 
 Basic packages and modules:
@@ -80,17 +91,6 @@ sudo apt update
 ```
 ```
 sudo apt install sublime-text -y
-```
-
-## Enable SSH Server
-```
-sudo apt install openssh-server -y
-```
-```
-sudo systemctl start ssh
-```
-```
-sudo systemctl enable ssh
 ```
 
 ## Configure Local firewall
