@@ -22,7 +22,7 @@ Copy:
 [Unit]
 Description=vncserver service
 After=display-manager.service network.target syslog.target
-
+exit
 [Service]
 Type=simple
 ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -loop -noxdamage -repeat -rfbauth /etc/vncserver.pass -rfbport 5900 -shared -bg -xrandr
