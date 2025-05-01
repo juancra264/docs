@@ -25,7 +25,7 @@ After=display-manager.service network.target syslog.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -loop -noxdamage -repeat -rfbauth /etc/vncserver.pass -rfbport 5900 -shared
+ExecStart=/usr/bin/x11vnc -forever -display :0 -auth guess -loop -noxdamage -repeat -rfbauth /etc/vncserver.pass -rfbport 5900 -shared -bg -xrandr
 ExecStop=/usr/bin/killall x11vnc
 Restart=on-failure
 
