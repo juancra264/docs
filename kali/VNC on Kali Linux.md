@@ -10,7 +10,6 @@ sudo apt install x11vnc -y
 sudo x11vnc -storepasswd /etc/vncserver.pass
 ```
 
-
 ## Configure VNC Server
 
 Add this service:
