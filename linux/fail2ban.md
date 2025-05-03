@@ -68,13 +68,12 @@ findtime  = 5m
 maxretry = 5
 banaction = firewallcmd-ipset
 banaction_allports = firewallcmd-ipset
-```
 
-```
-sudo systemctl restart fail2ban
-```
+or 
 
-```
+banaction = firewallcmd-rich-rules[actiontype=<multiport>]
+banaction_allports = firewallcmd-rich-rules[actiontype=<allports>]
+
 [sshd]
 enabled = true
 maxretry = 3
@@ -83,6 +82,11 @@ logpath = %(sshd_log)s
 backend = %(sshd_backend)s
 action = firewallcmd-ipset
 ```
+
+```
+sudo systemctl restart fail2ban
+```
+
 
 ``` 
 systemctl start fail2ban.service
@@ -128,4 +132,14 @@ tail -F /var/log/fail2ban.log
 Unbanning an IP address
 ```
 fail2ban-client set sshd unbanip IPADDRESS
+```
+
+Manual banning an IP address
+```
+fail2ban-client set sshd banip 10.0.0.192/28
+```
+
+Remove all banned hosts, run like follows
+```
+fail2ban-client unban --all
 ```
