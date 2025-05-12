@@ -35,3 +35,24 @@ qemu-img resize ubuntu-24.04.qcow2 32G
 ```bash
 qm importdisk 900 ubuntu-24.04.qcow2 local-lvm
 ```
+
+## Proxmox Template cleanup
+
+### Execute before to make into template
+
+```bash
+sudo rm -rf /etc/ssh/ssh_host_*
+sudo cloud-init clean
+sudo rm -rf /var/lib/cloud/instances
+sudo truncate -s 0 /etc/machine-id
+sudo rm /var/lib/dbus/machine-id
+sudo ln -s /etc/machine-id /var/lib/dbus/machine-id
+sudo apt clean
+sudo apt autoremove
+```
+
+### Verify commands
+```bash
+ls -l /var/lib/dbus/machine-id
+cat /etc/machine-id
+```
