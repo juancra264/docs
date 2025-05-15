@@ -29,7 +29,7 @@ sudo apt autoremove -y
 sudo apt autoclean -y
 ```
 ```
-sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli wireshark git tmux python3 python3-pip -y
+sudo apt install firmware-linux bmon htop iperf3 kitty speedtest-cli wireshark git tmux guake python3 python3-pip -y
 ```
 
 ## Installing Brave
