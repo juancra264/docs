@@ -1,5 +1,7 @@
 # Netbox-Docker pluggins Installation WITHOUT updating Netbox Image to Latest
 
+**_NOTE:_** For Docker install to latest please see: [Docker install](https://github.com/netbox-community/netbox-docker/wiki/Using-Netbox-Plugins)
+
 Go the directory, where Netbox Docker exists
 
 ```
