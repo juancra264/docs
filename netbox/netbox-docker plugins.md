@@ -16,7 +16,7 @@ touch Dockerfile-Plugins
 ```
 
 ```
-echo netbox_topology_views >> plugin_requirements.txt
+echo netbox-topology-views >> plugin_requirements.txt
 ```
 
 Dockerfile-Plugins
@@ -25,7 +25,7 @@ Dockerfile-Plugins
 FROM netboxcommunity/netbox:v4.1.11
 
 COPY ./plugin_requirements.txt /opt/netbox/
-RUN /usr/local/bin/uv pip install -r /opt/netbox/plugin_requirements.txt
+RUN /opt/netbox/venv/bin/pip install --no-warn-script-location -r /opt/netbox/plugin_requirements.txt
 
 # To create the image folder.
 RUN mkdir -p /opt/netbox/netbox/static/netbox_topology_views/img
