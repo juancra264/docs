@@ -22,7 +22,7 @@ echo netbox-topology-views >> plugin_requirements.txt
 Dockerfile-Plugins
 
 ```
-FROM netboxcommunity/netbox:v4.1.11
+FROM netboxcommunity/netbox:v4.1.11-3.0.2
 
 COPY ./plugin_requirements.txt /opt/netbox/
 RUN /opt/netbox/venv/bin/pip install --no-warn-script-location -r /opt/netbox/plugin_requirements.txt
