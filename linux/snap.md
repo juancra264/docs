@@ -1,0 +1,3 @@
+# Snap packet manager
+
+## Install
