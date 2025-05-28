@@ -33,7 +33,12 @@ docker compose exec netbox /opt/netbox/netbox/manage.py createsuperuser
 
 ## Netbox-docker operations
 
-**DB BACKUP**
+### Access the database
+```
+docker compose exec postgres sh -c 'psql -U $POSTGRES_USER $POSTGRES_DB'
+```
+
+### DB BACKUP
 ```bash
 # Stop all containers
 docker compose down
@@ -48,8 +53,7 @@ docker compose exec -T postgres sh -c 'pg_dump -cU $POSTGRES_USER $POSTGRES_DB' 
 docker compose down
 ```
 
-
-**DB RESTORE**
+### DB RESTORE
 ```bash
 # Stop all containers
 docker compose down
@@ -62,7 +66,7 @@ gunzip -c db_dump.sql.gz | docker compose exec -T postgres sh -c 'psql -U $POSTG
 docker compose up -d
 ```
 
-**File Operations**
+## File Operations
 
 ```bash
 #Backup of the media directory, which contains uploaded images.
