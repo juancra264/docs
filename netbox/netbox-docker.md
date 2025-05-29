@@ -78,3 +78,6 @@ docker compose exec -T netbox tar c -jf - -C /opt/netbox/netbox/media ./ > media
 docker compose exec -T netbox tar x -jvf - -C /opt/netbox/netbox/media < media-backup.tar.bz2
 ```
 
+## Netbox Wiki and reference information
+
+https://github.com/netbox-community/netbox-docker/wiki
