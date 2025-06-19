@@ -1,4 +1,4 @@
-# BGP on Cisco devices
+# BGP on Cisco IOS devices
 
 ## Configuration
 
@@ -7,8 +7,8 @@ BGP basic
 ```
 configure terminal
   router bgp asn
-  router-id ip-address
-  cluster-id cluster-id
+  bgp router-id ip-address
+  bgp cluster-id cluster-id
   address-family ipv4 unicast
   neighbor ip-address remote-as as-number
   network ip-prefix
@@ -20,8 +20,8 @@ BGP route reflector
 ```
 configure terminal
   router bgp asn
-  router-id ip-address
-  cluster-id cluster-id
+  bgp router-id ip-address
+  bgp scluster-id cluster-id
   address-family ipv4 unicast
   neighbor ip-address remote-as as-number
     address-family ipv4 { unicast | multicast }
