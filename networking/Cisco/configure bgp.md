@@ -8,7 +8,6 @@ BGP basic
 configure terminal
   router bgp asn
   bgp router-id ip-address
-  bgp cluster-id cluster-id
   address-family ipv4 unicast
   neighbor ip-address remote-as as-number
   network ip-prefix
@@ -24,11 +23,12 @@ configure terminal
   bgp scluster-id cluster-id
   address-family ipv4 unicast
   neighbor ip-address remote-as as-number
-    address-family ipv4 { unicast | multicast }
-    route-reflector-client 
+  address-family ipv4 unicast
+    neighbor ip-address route-reflector-client
+    neighbor ip-address activate 
     exit
   network ip-prefix
-  exit
+  exits
  ```
 
 
