@@ -4,32 +4,35 @@
 
 BGP basic
 
-```
+```cisco
 configure terminal
-  router bgp asn
-  bgp router-id ip-address
-  address-family ipv4 unicast
-  neighbor ip-address remote-as as-number
-  network ip-prefix
+  router bgp {asn}
+    bgp router-id {ip-id}
+    network {ip-prefix} mask {net-mask}
+    neighbor {ip-peer} remote-as {asn-peer}
+   address-family ipv4 unicast
+   exit
   exit
- ```
+end
+```
 
 BGP route reflector
 
-```
+```cisco
 configure terminal
-  router bgp asn
-  bgp router-id ip-address
-  bgp scluster-id cluster-id
-  address-family ipv4 unicast
-  neighbor ip-address remote-as as-number
-  address-family ipv4 unicast
-    neighbor ip-address route-reflector-client
-    neighbor ip-address activate 
-    exit
-  network ip-prefix
+  router bgp {asn}
+    bgp router-id {ip-id}
+    bgp cluster-id {decimal-id | ip-id}
+    neighbor {ip-peer} remote-as {asn-peer}
+    address-family ipv4 unicast
+      neighbor {ip-peer} route-reflector-client
+      neighbor {ip-peer} next-hop-self
+      neighbor {ip-peer} activate 
+      exit
+    network {ip-prefix} mask {net-mask}
   exits
- ```
+end
+```
 
 
 ## Clear commands
