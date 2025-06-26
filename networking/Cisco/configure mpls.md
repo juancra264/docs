@@ -199,6 +199,10 @@ show bgp vpnv4 unicast all summary
 ```
 
 ```
+show ip vrf
+```
+
+```
 show bgp vpnv4 unicast vrf CUST-A
 ```
 
