@@ -2,7 +2,7 @@
 
 ## Configuration
 
-- Interfaces Loopbacks and Interfaces with IP scheme
+### Interfaces Loopbacks and Interfaces with IP scheme
 ```
 interface loopback 0
   ip address 2.2.2.2 255.255.255.255
@@ -19,7 +19,7 @@ interface eth0/1
 ```
 
 
-- OSPF for the MPLS core (connectivity between PEs and Ps)
+### OSPF for the MPLS core (connectivity between PEs and Ps)
 On Ps:
 ```
 router ospf 1
@@ -51,7 +51,7 @@ interface eth0/0
 !
 ```
 
-- LDP adj between PEs and Ps
+### LDP adj between PEs and Ps
 
 ```
 interface eth0/0
@@ -63,7 +63,7 @@ interface eth0/1
 !
 ```
 
-- VFR with RDs and RTs for each Customer.
+### VFR with RDs and RTs for each Customer.
 
 on PEs related to the customer:
 ```
@@ -83,7 +83,7 @@ interface eth0/1
 !
 ```
 
-- iBGP peering using MP-BGP enabling VPNv4 address family
+### iBGP peering using MP-BGP enabling VPNv4 address family
 
 ```
 router bgp 65001
@@ -101,7 +101,7 @@ router bgp 65001
      neighbor 4.4.4.4 activate
 ```
 
-- Redistribute route on the VRFs routing protocols to iBGP on the edge PEs
+### Redistribute route on the VRFs routing protocols to iBGP on the edge PEs
 
 Using BGP on customer VRF
 
@@ -171,7 +171,6 @@ router bgp 65001
 !
   
 ```
-
 
 Repeat the same config on the other PEs and CEs related to the customer.
 
