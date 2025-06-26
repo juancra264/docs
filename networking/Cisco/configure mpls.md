@@ -183,7 +183,7 @@ show run | s ospf
 ```
 
 ```
-show run | b bgp
+show run | s bgp
 ```
 
 ```
