@@ -124,7 +124,7 @@ on PE1 facing CE1:
 ```
 router 65001
   address-family ipv4 vrf CUST-A
-    neighbor 10.10.10.2 remote-as 65100
+    neighbor 10.10.10.2 remote-as 1
     exit
   exit
 !
