@@ -209,4 +209,3 @@ show bgp vpnv4 unicast all 192.168.12.0
 ```
 show ip cef vrf CUST-A 192.168.12.0
 ```
-
