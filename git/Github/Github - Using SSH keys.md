@@ -1,3 +1,5 @@
+# Github using SSH key
+
 After you’ve added your SSH key to your GitHub account, open the terminal and run:
 
 ```
