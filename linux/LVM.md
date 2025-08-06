@@ -24,7 +24,7 @@ iotop
 pvs
 ```
 ```
-pvsdisplay
+pvdisplay
 ```
 
 ## Show Volume Group (VG)
