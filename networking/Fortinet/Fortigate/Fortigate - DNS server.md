@@ -2,13 +2,22 @@
 
 ## CLI Configuration
 
+Enable DNS server on the firewall
+
+```
+config system settings
+    set gui-dns-database enable 
+end
+```
+
+
 Configure DNS servers for system
 
 ```
 config system dns
-  set primary 41.74.203.10
-  set secondary 41.74.203.11
-  set domain "emmirothusa.com"
+  set primary {primaryDNS}
+  set secondary {secondayDNS}
+  set domain "{searchDomain}"
 end
 ```
 
@@ -17,11 +26,20 @@ Configure DNS database for forward
 ```
 config system dns-database
   edit "internal"
-    set domain "example.com"
+    set domain "{example.com}"
     set authoriative disable
-    set forwarder "10.200.0.110" 10.200.0.10"
-    set source-ip 10.26.0.1
+    set forwarder "{internalDNS1resolver}" "{internalDNS2resolver}"
+    set source-ip "{internalSourceIP}"
   next
+end
+```
+
+Interface that DNS response:
+
+```
+config system dns-server
+    edit "{interface_name}"
+    next
 end
 ```
 
