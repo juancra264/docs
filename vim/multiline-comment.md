@@ -12,3 +12,4 @@
 - Press Ctrl + V, and go down until the last commented line.
 - Press `x`, that will delete all the `#` characters vertically.
 
+
