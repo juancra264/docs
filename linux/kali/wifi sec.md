@@ -5,6 +5,21 @@
 sudo iwconfig
 ```
 
+## Monitor mode
+```
+aimon-ng start wlan1
+```
+
+```
+iwconfig
+```
+
+## Scanning wifi
+```
+airodump-ng wlan1mon
+```
+
+
 ## Scanning Wifi
 ```
 sudo iwlist wlan1 scan
