@@ -14,9 +14,17 @@ aimon-ng start wlan1
 iwconfig
 ```
 
-## Scanning wifi
+## Scanning wifi - AIRODUMP
 ```
 airodump-ng wlan1mon
+```
+
+```
+airodump-ng --bssid [[mac]] --channel [[channel]] wlan1mon
+```
+
+```
+airodump-ng --bssid [[mac]] --channel [[channel]] --write data wlan1mon
 ```
 
 
