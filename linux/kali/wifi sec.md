@@ -27,6 +27,17 @@ airodump-ng --bssid [[mac]] --channel [[channel]] wlan1mon
 airodump-ng --bssid [[mac]] --channel [[channel]] --write data wlan1mon
 ```
 
+## Deauth process - AIRODUMP
+```
+aireplay-ng --deauth 20000 -a [[BSSID]] -c [[STATION]] wlan1mon
+```
+
+## MAC Changer
+```
+sudo macchanger -r wlan1
+```
+
+
 
 ## Scanning Wifi
 ```
