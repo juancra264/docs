@@ -6,6 +6,9 @@ show system ha
 **Viewing cluster status**
 ```bash
 get system ha status
+```
+
+```bash
 diag ha sys status
 ```
 
