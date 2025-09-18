@@ -17,7 +17,12 @@ To factory default a FortiGate firewall, there are several methods available dep
 ## Using the CLI:
 - Connect to the FortiGate using SSH or via the console port.
 - Log in with your admin credentials.
-- Run the following command: execute factory-reset.
+- Run the following command: 
+
+```
+execute factory-reset
+```
+
 - Confirm the action when prompted.
 - The device will reboot and restore factory settings.
 
