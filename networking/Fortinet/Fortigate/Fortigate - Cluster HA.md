@@ -18,15 +18,23 @@ config system ha
     set group-id 1
     set group-name {{name_cluster}}
     set password {{Password_cluster}}
-    set hbdev Port5 10 Port6 20
+    set hbdev {{HAport1}} 10 {{HAport2}} 20
     set override disable
-    set monitor Port1
+    set monitor {{MonitorPort}}
     set session-pickup enable
     set session-pickup-connectionless enable
 end 
 ```
 
 Repeat steps on the other FortiGate devices to join the cluster, giving each device a unique hostname.
+
+Force a Manual Sync
+You can manually trigger a sync using CLI:
+
+```shell
+execute ha synchronize start
+```
+
 
 ---
 
@@ -43,7 +51,7 @@ get system ha status
 ```
 
 ```shell
-diag ha sys status
+diagnose sys ha status
 ```
 
 **Check the checksum mismatch**

@@ -44,7 +44,7 @@ config system interface
   edit internal2
   set ip 192.168.8.1 255.255.255.0
   set allowaccess ping https ssh
-  set alias "LAN Port"
+  set alias "local MGMT LAN Port"
   set role lan
   next
 end
