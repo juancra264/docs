@@ -4,7 +4,7 @@
 
 Change the hostname of the FortiGate:
 
-```
+```shell
 config system global
     set hostname Example1_host
 end
@@ -12,7 +12,7 @@ end
 
 Enable HA
 
-```
+```shell
 config system ha
     set mode a-p
     set group-id 1
@@ -33,59 +33,59 @@ Repeat steps on the other FortiGate devices to join the cluster, giving each dev
 ## Show configuration and operation
 
 **Cluster config:**
-```bash
+```shell
 show system ha
 ```
 
 **Viewing cluster status**
-```bash
+```shell
 get system ha status
 ```
 
-```bash
+```shell
 diag ha sys status
 ```
 
 **Check the checksum mismatch**
-```
+```shell
 diag sys ha checksum show <vdom>
 ```
 
-```
+```shell
  diag sys ha checksum show <global>
 ```
 
 
 **Manage any other firewall within the cluster**
-```bash
+```shell
 execute ha manage 1 <admin_user>
 ```
 
 **Check the checksum - config syncronization.**
-```bash
+```shell
 diagnose sys ha checksum show
 ```
 
 **Cluster failover module:**
-```bash
+```shell
 diag sys ha reset-uptime
 ```
 
 **Force the Slave to re-sync with the Master**
-```bash
+```shell
 execute ha synchronize start
 ```
-```bash
+```shell
 diagnose sys ha checksum recalculate
 ```
 
 **Command to re-calculate the checksum**
-```
+```shell
 diagnose sys ha checksum recalculate [<vdom-name> | global]
 ```
 
 **Debug HA logs**
-```
+```shell
 diag debug app hasync 255
 diag debug enable
 execute ha synchronize start
