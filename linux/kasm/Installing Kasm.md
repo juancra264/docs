@@ -41,7 +41,7 @@ cd /opt/kasm/current/certs
 Create your SSL certificates:
 
 ```shell
-certbot certonly --standalone --agree-tos --preferred-challenges dns -d example.com
+sudo certbot certonly --standalone --agree-tos --preferred-challenges dns -d example.com
 ```
 
 Replace example.com with your domain name that points to your server.
