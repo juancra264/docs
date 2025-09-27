@@ -25,3 +25,15 @@ Run a Command on a Remote Server
 mosh remote_host -- command -with -flags
 ```
 
+Adding ports to firewalld
+
+```shell
+firewall-cmd --add-port=60000-61000/udp --permanent
+````
+```shell
+sudo firewall-cmd --reload 
+```
+```shell
+sudo firewall-cmd --list-all
+```
+

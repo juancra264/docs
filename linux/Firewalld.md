@@ -60,3 +60,12 @@ sudo firewall-cmd --reload
 ```
 sudo firewall-cmd --list-all
 ```
+
+## Adding a port range 
+
+Adding port for mosh range
+
+```shell
+firewall-cmd --add-port=60000-61000/udp --permanent
+```
+
