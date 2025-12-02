@@ -1,5 +1,23 @@
 # Fortigate - Remove Virtual Switch on FG-80F
 
+## Show config
+
+```shell
+show system virtual-switch
+```
+
+```shell
+get system switch
+```
+
+Enable the hardware switch option in the GUI:
+```shell
+config system global
+  set virtual-switch-vlan disable
+end
+```
+
+
 ## Step by step Configuration
 
 **1. Delete Firewall Policies Using the Switch**
