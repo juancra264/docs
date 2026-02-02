@@ -1,0 +1,24 @@
+# AWS Secure Account
+
+## Enable Multi-Factor Authentication (MFA) 
+For the root user and all IAM users to add a critical layer of security beyond passwords.
+
+## Create and use IAM users instead of the root user
+The root user has full access to all AWS resources and should only be used for account-level tasks like billing or support.
+
+## Avoid long-term credentials
+Instead, use temporary credentials via IAM roles for workloads (e.g., EC2 instances, Lambda functions) and federated access for users.
+
+## Set up AWS Budgets and billing alerts
+to monitor and control costs, preventing unexpected charges from unintended resource usage.
+
+## Enable AWS CloudTrail
+for intelligent threat detection that identifies malicious activity, account compromise, and resource-level intrusions across your AWS environment. 
+
+## Activate Amazon GuardDuty
+
+## Secure your root user credentials
+to manage multiple accounts and enforce security policies across them, such as centrally removing root user access keys from member accounts. 
+
+## Use AWS Organization
+to manage multiple accounts and enforce security policies across them, such as centrally removing root user access keys from member accounts. 
