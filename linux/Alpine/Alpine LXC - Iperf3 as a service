@@ -1,0 +1,127 @@
+# Alpine linux - iperf3 as a service
+
+**iperf3 as a service** inside an **Alpine Linux LXC container** using OpenRC (Alpine’s init system).
+
+This assumes:
+
+*   You’re inside an **Alpine LXC**
+*   You have **iperf3 installed**
+*   You want it to run automatically at boot as a daemon/service
+
+***
+
+# ✅ Step 1 — Install iperf3
+
+```sh
+apk add iperf3
+```
+
+***
+
+# ✅ Step 2 — Create an OpenRC service file
+
+Create a new service script:
+
+```sh
+nano /etc/init.d/iperf3
+```
+
+Paste the following:
+
+```sh
+#!/sbin/openrc-run
+
+name="iperf3"
+command="/usr/bin/iperf3"
+command_args="-s"  # run server
+pidfile="/run/iperf3.pid"
+command_background="yes"
+
+depend() {
+    need net
+    after firewall
+}
+```
+
+### What this does:
+
+*   Runs **iperf3 in server mode (`-s`)**
+*   Starts it **in the background**
+*   Ensures networking is up first
+
+***
+
+# ✅ Step 3 — Make the service executable
+
+```sh
+chmod +x /etc/init.d/iperf3
+```
+
+***
+
+# ✅ Step 4 — Add it to the default runlevel (start at boot)
+
+```sh
+rc-update add iperf3 default
+```
+
+***
+
+# ✅ Step 5 — Start the service now
+
+```sh
+rc-service iperf3 start
+```
+
+***
+
+# 🎉 Verify it’s running
+
+Check service status:
+
+```sh
+rc-service iperf3 status
+```
+
+Check process:
+
+```sh
+ps aux | grep iperf3
+```
+
+Test from another machine:
+
+```sh
+iperf3 -c <LXC_IP>
+```
+
+***
+
+# Optional: Run on a specific port
+
+Edit:
+
+```sh
+command_args="-s -p 5202"
+```
+
+***
+
+# Optional: Run as a “reverse mode preferred” test server
+
+```sh
+command_args="-s --forceflush"
+```
+
+***
+
+# If you want it to log output
+
+Add inside the service file:
+
+```sh
+output_log="/var/log/iperf3.log"
+error_log="/var/log/iperf3.err"
+```
+
+***
