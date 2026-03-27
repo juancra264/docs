@@ -14,7 +14,6 @@
 Para instalar **NixOS** desde la versión mínima (ISO minimal), el proceso es manual pero muy estructurado. Asumiendo que ya has arrancado desde el medio de instalación y tienes acceso a la terminal, estos son los pasos fundamentales:
 
 ### 0. Ingresar al usuario Root
-
     ```bash
     sudo -i
     ```
