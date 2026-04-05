@@ -150,4 +150,22 @@ restic snapshots
 restic restore 76a6c637 --target ~/backup-file
 ```
 
+## Schedule Backups
 
+```bash
+crontab -e
+```
+
+This command does the following every hour:
+
+```bash
+# m h   dom mon dow command
+0   *   *   *   *   . ~/.restic.env && restic backup /etc/nginx ~/sample-site.com/ 2>> ~/restic.error.log >> ~/restic.log
+```
+
+This will keep the last 10 backups, one backup per day for the last 30 days, and one backup per month for the last 12 months.
+
+```bash
+# m h   dom mon dow command
+1   0   *   *   *   . ~/.restic.env && restic forget --keep-last 10 --keep-daily 30 --keep-monthly 12 2>> ~/restic.error.log >> ~/restic.log
+```
